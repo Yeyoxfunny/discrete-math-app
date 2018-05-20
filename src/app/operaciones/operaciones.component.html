@@ -1,0 +1,41 @@
+<div class="container mt-2">
+  <div class="section-container z-depth-1 mt-2">
+    <header class="section-header light-blue darken-1">
+      <span class="section-title white-text">Operaciones con Sistemas de Numeración</span>
+    </header>
+    <div class="section-content">
+      <div class="row">
+        <div class="input-field col m6 s12">
+          <input type="text" id="valor1" name="valor1" placeholder [(ngModel)]="valor1">
+          <label for="valor1">Ingrese el valor 1:</label>
+        </div>
+        <div class="input-field col m6 s12">
+          <input type="text" id="valor2" name="valor2" placeholder [(ngModel)]="valor2">
+          <label for="textarea1">Ingrese el valor 2:</label>
+        </div>
+        <div class="input-field col m6 s12">
+          <select name="sistemaNumerico" id="sistemaNumerico" materialize="material_select" [materializeSelectOptions]="sistemasNumericos"
+            [(ngModel)]="sistemaNumerico">
+            <option value=""></option>
+            <option *ngFor="let option of sistemasNumericos" [value]="option.value">{{ option.name }}</option>
+          </select>
+          <label for="sistemaNumerico">Sistema Numérico</label>
+        </div>
+        <div class="input-field col m6 s12">
+          <select name="operacion" id="operacion" materialize="material_select" [materializeSelectOptions]="operacion" [(ngModel)]="operacion">
+            <option value=""></option>
+            <option *ngFor="let operacion of operaciones" [ngValue]="operacion">{{ operacion.nombre }}</option>
+          </select>
+          <label for="sistemaNumerico">Operación a Realizar</label>
+        </div>
+        <div class="col s12">
+          <button type="submit" class="waves-effect waves-light btn" (click)="calcular()">Calcular</button>
+        </div>
+        <div class="input-field col s12 mt-2">
+            <input type="text" id="resultado" name="resultado" placeholder [(ngModel)]="resultado">
+            <label for="resultado">Resultado:</label>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

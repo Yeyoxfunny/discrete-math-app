@@ -1,0 +1,22 @@
+<div class="container mt-2">
+  <div class="section-container z-depth-1 mt-2">
+    <header class="section-header light-blue darken-1">
+      <span class="section-title white-text">Encrypter Service</span>
+    </header>
+    <div class="section-content">
+      <div class="input-field mt-0">
+        <textarea id="textarea1" placeholder="" class="materialize-textarea" style="height: 90px;" name="input" [(ngModel)]="input"></textarea>
+        <label for="textarea1">Texto a cifrar o descifrar</label>
+      </div>
+      <div>
+          <button class="waves-effect waves-light btn" (click)="cifrar()">Cifrar</button>
+          <button class="waves-effect waves-light btn ml-1" (click)="descifrar()">Descifrar</button>
+      </div>
+
+      <div class="input-field mt-2">
+          <textarea id="textarea1" placeholder="" class="materialize-textarea" style="height: 90px;" name="output" [(ngModel)]="output"></textarea>
+          <label for="textarea1">Resultado</label>
+        </div>
+    </div>
+  </div>
+</div>

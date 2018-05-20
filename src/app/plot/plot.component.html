@@ -1,0 +1,10 @@
+<div class="container">
+  <form (ngSubmit)="draw()">
+    <div class="input-field mt-2">
+      <input placeholder="" id="function" type="text" name="equation" [(ngModel)]="equation">
+      <label for="function">Ingrese una ecuación:</label>
+    </div>
+    <button type="submit" class="waves-effect waves-light btn">Graficar</button>
+  </form>
+  <div id="plot"></div>
+</div>
