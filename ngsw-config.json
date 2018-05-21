@@ -9,7 +9,8 @@
         "/index.html",
         "/*.css",
         "/*.js",
-        "/assets/**"
+        "/assets/**",
+        "/Roboto**"
       ]
     }
   }]
