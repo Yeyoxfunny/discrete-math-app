@@ -1,7 +1,7 @@
 {
-  "name": "discrete-math-app",
-  "short_name": "discrete-math-app",
-  "theme_color": "#1976d2",
+  "name": "MathApp",
+  "short_name": "MathApp",
+  "theme_color": "#039be5",
   "background_color": "#fafafa",
   "display": "standalone",
   "scope": "/",
