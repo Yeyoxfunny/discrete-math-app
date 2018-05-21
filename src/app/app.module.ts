@@ -13,6 +13,8 @@ import { PlotComponent } from './plot/plot.component';
 import { HomeComponent } from './home.component';
 import { EncryptComponent } from './encrypt/encrypt.component';
 import { OperacionesComponent } from './operaciones/operaciones.component';
+import { ServiceWorkerModule } from '@angular/service-worker';
+import { environment } from '../environments/environment';
 
 @NgModule({
   declarations: [
@@ -27,7 +29,8 @@ import { OperacionesComponent } from './operaciones/operaciones.component';
     LayoutModule,
     FormsModule,
     RouterModule.forRoot(AppRoutes),
-    MaterializeModule
+    MaterializeModule,
+    ServiceWorkerModule.register('/ngsw-worker.js', { enabled: environment.production })
   ],
   providers: [],
   bootstrap: [AppComponent]
